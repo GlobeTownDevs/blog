@@ -25,6 +25,34 @@
    fa fa-quote-right
 */
 
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Bebas Neue';
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+li {
+  background-color: blue;
+  display: inline;
+}
+
+nav {
+  /* TODO - fix navbar to give it a minimum height */
+  height: 10vh;
+  background-color: yellow;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
 /* Grid */
 
 .container {
@@ -32,14 +60,24 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-.columns {
+.row-full {
+  min-height: 90vh;
+}
+
+.row-half {
+  min-height: 50%;
+}
+
+[class*='row-'] {
+  border: 1px solid black;
   width: 100%;
-  float: left;
-  box-sizing: border-box;
+}
+
+[class*='col-'] {
+  width: 100%;
+  padding: 10px;
 }
 
 /* For devices larger than 400px */
@@ -47,6 +85,7 @@
   .container {
     width: 85%;
     padding: 0;
+    padding-top: 10vh;
   }
 }
 
@@ -56,13 +95,16 @@
     width: 80%;
   }
 
-  .three.columns {
+  .col-1 {
+    width: 5%;
+  }
+  .col-3 {
     width: 22%;
   }
-  .six.columns {
+  .col-6 {
     width: 48%;
   }
-  .twelve.columns {
+  .col-12 {
     width: 100%;
   }
 }
