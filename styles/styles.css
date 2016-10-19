@@ -35,12 +35,17 @@ section, footer {
 
 /* Base */
 
+html {
+    font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
 }
 
 h1 {
   font-family: 'Bebas Neue';
+    font-size: 15px;
 }
 
 ul {
@@ -70,7 +75,7 @@ li {
 }
 
 .banner_heading {
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .btn {
@@ -79,6 +84,9 @@ li {
   padding: .5em;
   cursor: pointer;
 }
+
+
+/* Nav */
 
 nav {
   /* TODO - agree on navbar heights for different screens */
@@ -94,13 +102,15 @@ nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: #333;
     text-align: center;
 }
 
 /* Float the list items side by side */
-.nav__item {display: inline-block;}
+.nav__item {
+    display: inline-block;
+    background-color: #333;
+}
 
 /* Style the links inside the list items */
 .nav__link, .nav__hamburger {
@@ -120,32 +130,7 @@ nav {
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
 .nav__icon {display: none;}
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:680px) {
-  .nav__item {display: none;}
-  .nav__icon {
-    float: right;
-    display: inline-block;
-  }
-}
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:680px) {
-  .nav.responsive {position: relative;}
-  .nav.responsive .nav__icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .nav.responsive .nav__item {
-    float: none;
-    display: inline;
-  }
-  .nav.responsive .nav__link {
-    display: block;
-    text-align: center;
-  }
-}
 
 /* Grid */
 
@@ -204,3 +189,34 @@ nav {
     width: 100%;
   }
 }
+
+
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  .nav__item {display: none;}
+  .nav__icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .nav__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive .nav__item {
+    float: none;
+    display: block;
+
+  }
+  .nav.responsive .nav__link {
+    display: block;
+    text-align: center;
+  }
+}
+
