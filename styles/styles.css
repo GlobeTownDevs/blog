@@ -6,23 +6,6 @@
   src: url('fonts/BebasNeue.otf');
 }
 
-/*to be added to the HTML file*/
-/*<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">*/
-
-/* use B&W colour scheme using grayscale*/
-/* add 1 characteristic colour --> tangerine*/
-.color-highlight {
-  color: rgb(255,68,21);
-}
-
-body {
-  background-color: #f7f7f7;
-}
-
-section, footer {
-  background-color: white;
-}
-
 /*useful classes for font-awesome icons
    fa fa-github
    fa fa-twitter
@@ -32,6 +15,25 @@ section, footer {
    fa fa-quote-left
    fa fa-quote-right
 */
+
+/* Colours */
+
+/* use B&W colour scheme using grayscale*/
+/* add 1 characteristic colour --> tangerine*/
+
+.color-highlight {
+  background-color: rgb(255, 68, 21);
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+section, footer {
+  background-color: #ffffff;
+}
+
+/* Base */
 
 * {
   box-sizing: border-box;
@@ -47,11 +49,17 @@ ul {
 }
 
 li {
-  background-color: blue;
   display: inline;
 }
 
-#banner {
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Modules */
+
+.banner {
   background: linear-gradient(
     rgba(20, 20, 20, 0.5),
     rgba(20, 20, 20, 0.5)),
@@ -61,14 +69,17 @@ li {
   color: white;
 }
 
-#banner h1 {
+.banner_heading {
   font-size: 4em;
 }
 
-.center {
-  margin: 0 auto;
-  text-align: center;
+.btn {
+  border: none;
+  color: white;
+  padding: .5em;
+  cursor: pointer;
 }
+
 nav {
   /* TODO - fix navbar to give it a minimum height */
   height: 10vh;
@@ -79,24 +90,24 @@ nav {
   left: 0;
   z-index: 999;
 }
+
 /* Grid */
 
 .container {
-  position: relative;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
 }
 
-.row-full {
+.height-full {
   min-height: 90vh;
 }
 
-.row-half {
+.height-half {
   min-height: 50%;
 }
 
-[class*='row-'] {
+[class*='height-'] {
   border: 1px solid black;
   width: 100%;
 }
@@ -113,7 +124,7 @@ nav {
     padding: 0;
   }
 
-  #banner {
+  .banner {
     margin-top: 10vh;
   }
 }

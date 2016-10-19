@@ -7,6 +7,7 @@
     <title>Globe Town Devs</title>
     <link href="styles/normalize.css" type="text/css" rel="stylesheet">
     <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -18,13 +19,13 @@
         </ul>
     </nav>
     <!-- Landing Page. (Use fullscreen class to set 100vh) -->
-    <header class="col-12 row-full" id="banner">
+    <header class="col-12 height-full banner">
         <div class="col-6 center">
-            <h1>GlobeTownDevs</h1>
+            <h1 class="banner_heading">GlobeTownDevs</h1>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
 
-            <button >Find Out More</button>
+            <button class="btn color-highlight">Find Out More</button>
 
             <ul>
                 <!-- use background-image css property to set images -->
@@ -37,7 +38,7 @@
     </header>
     <div class="container">
         <!-- FAC -->
-        <section id="fac" class="col-12 row-full">
+        <section id="fac" class="col-12 height-full">
                 <h2>Who are FAC?</h2>
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
@@ -46,17 +47,17 @@
         <!--        <blockquote></blockquote>-->
                 
                 <!-- to find out more about fac... ?? -->
-                <button>Find out more... </button>
+                <button class="btn">Find out more... </button>
         </section>
 
         <!-- Team -->
-        <section id="team" class="col-12 row-full">
-                <article id="nick" class="row-half">
+        <section id="team" class="col-12 height-full">
+                <article id="nick" class="height-half">
                     <div class="col-6">
                         <ul>
-                            <li><a href="#twitter..."></a></li>
-                            <li><a href="#linkedin..."></a></li>
-                            <li><a href="#github..."></a></li>
+                            <li><a href="#twitter...">Twitter</a></li>
+                            <li><a href="#linkedin...">Linkedin</a></li>
+                            <li><a href="#github...">Github</a></li>
                         </ul>
                     </div>
 
@@ -76,12 +77,12 @@
                 <!-- repeat three times for other team members -->
                 </article>
 
-                <article id="lucy" class="row-half">
+                <article id="lucy" class="height-half">
                     <div class="col-6">
                         <ul>
-                            <li><a href="#twitter..."></a></li>
-                            <li><a href="#linkedin..."></a></li>
-                            <li><a href="#github..."></a></li>
+                            <li><a href="#twitter...">Twitter</a></li>
+                            <li><a href="#linkedin...">Linkedin</a></li>
+                            <li><a href="#github...">Github</a></li>
                         </ul>
                     </div>
 
@@ -104,14 +105,14 @@
 
 
         <!-- contact -->
-        <footer id="contact" class="col-12 row-half">
+        <footer id="contact" class="col-12 height-half center">
 
             <form action="https://formspree.io/globetowndevs@gmail.com"
           method="POST">
                     <input type="text" name="name" placeholder="Your Name Here">
                     <input type="email" name="_replyto" placeholder="Your Email Here">
                     <textarea name="message" placeholder="How can we help you get things done?"></textarea>
-                    <input type="submit" value="Send">
+                    <input type="submit" class="btn" value="Send">
             </form>
         </footer>
     </div>
