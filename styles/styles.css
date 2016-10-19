@@ -57,9 +57,24 @@ li {
   display: inline;
 }
 
+
+/* Helpers */
+
 .center {
   margin: 0 auto;
   text-align: center;
+}
+
+.nav-space {
+  padding-top: 50px;
+}
+
+.top-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 /* Modules */
@@ -86,49 +101,57 @@ li {
 }
 
 
-/* Nav */
-
-nav {
-  /* TODO - agree on navbar heights for different screens */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
+/*
+  NAV MENU (mobile)
+*/
 
 .nav {
-    height: 50px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    text-align: center;
+  height: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  text-align: center;
 }
 
-/* Float the list items side by side */
-.nav__item {
-    display: inline-block;
-    background-color: #333;
+.nav__item {display: none;}
+
+/* style mobile links & hamburger */
+.nav__link,
+.nav__hamburger {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: #333;
+  font-size: 17px;
 }
 
-/* Style the links inside the list items */
-.nav__link, .nav__hamburger {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-    /*min-height: 15vh;*/
+/* positions hamburger to right */
+.nav__icon {
+    float: right;
 }
 
-/* Change background color of links on hover */
-.nav__link:hover {background-color: #555;}
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-.nav__icon {display: none;}
+/* when hamburger is clicked,
+  'responsive' class is added to nav container,
+   allowing the following styles...
+*/
+
+/* positions hamburger in top right */
+.nav.responsive .nav__hamburger {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* allows nav links to stack */
+.nav.responsive .nav__item,
+.nav.responsive .nav__link {
+  display: block;
+}
 
 
 
@@ -141,7 +164,7 @@ nav {
 }
 
 .height-full {
-  min-height: calc(100vh - 50px);
+  min-height: 100vh; /* Use padding to make room for nav, see mobile preview in dev-tools */
 }
 
 .height-half {
@@ -157,6 +180,10 @@ nav {
   width: 100%;
   padding: 10px;
 }
+
+
+
+/* Media Queries */
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
@@ -190,33 +217,38 @@ nav {
   }
 }
 
+/* For devices larger than 680px */
+@media screen and (min-width:680px) {
 
+  /*
+    Nav (desktop)
+  */
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:680px) {
-  .nav__item {display: none;}
+  .nav {
+    height: 70px;
+    padding: 12px; /* centers items */
+  }
+
+  /* Hide nav icon */
   .nav__icon {
-    float: right;
+    display: none;
+  }
+
+  /* Postion elements side by side */
+  .nav__item,
+  .nav.responsive .nav__item {
     display: inline-block;
   }
-}
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:680px) {
-  .nav.responsive {position: relative;}
-  .nav.responsive .nav__hamburger {
-    position: absolute;
-    right: 0;
-    top: 0;
+  /* Sets button width */
+  .nav__link {
+    width: 100px;
   }
-  .nav.responsive .nav__item {
-    float: none;
-    display: block;
 
+  /* Nav hover colour */
+  .nav__link:hover {
+    background-color: #555;
   }
-  .nav.responsive .nav__link {
-    display: block;
-    text-align: center;
-  }
+
 }
 
