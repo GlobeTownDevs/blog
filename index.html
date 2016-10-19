@@ -11,15 +11,19 @@
 <body>
 
     <nav>
-        <ul>
+        <ul class="topnav nav--fixed" id="myTopnav">
+            <li><a href="#about">About</a></li>
             <li><a href="#fac">FAC</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li class="icon">
+                <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+            </li>
         </ul>
     </nav>
     
     <!-- Landing Page. (Use fullscreen class to set 100vh) -->
-    <header class="container fullscreen">
+    <header class="container fullscreen" id="about">
         <h1>GlobeTownDevs</h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
@@ -98,6 +102,8 @@
         </form>
 
     </footer>
+
+    <script src="app.js"></script>
 
 </body>    
 </html>
