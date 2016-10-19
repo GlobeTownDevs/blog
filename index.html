@@ -12,12 +12,17 @@
 <body>
 
     <nav>
-        <ul>
-            <li><a href="#fac">FAC</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul class="nav" id="myTopnav">
+            <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#fac">FAC</a></li>
+            <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+            <li class="nav__icon">
+                <a class="nav__hamburger" href="javascript:void(0);" onclick="toggleMenu()">&#9776;</a>
+            </li>
         </ul>
     </nav>
+
     <!-- Landing Page. (Use fullscreen class to set 100vh) -->
     <header class="col-12 height-full banner">
         <div class="col-6 center">
@@ -36,16 +41,17 @@
             </ul>
         </div>
     </header>
+
     <div class="container">
         <!-- FAC -->
         <section id="fac" class="col-12 height-full">
                 <h2>Who are FAC?</h2>
-                
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
-                
+
                 <!-- add quote if suitable to content -->
         <!--        <blockquote></blockquote>-->
-                
+
                 <!-- to find out more about fac... ?? -->
                 <button class="btn">Find out more... </button>
         </section>
@@ -117,5 +123,7 @@
         </footer>
     </div>
 
-</body>    
+    <script src="app.js"></script>
+
+</body>
 </html>
