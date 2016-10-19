@@ -5,112 +5,136 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Globe Town Devs</title>
-    <link href="normalize.css" type="text/css" rel="stylesheet">
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="styles/normalize.css" type="text/css" rel="stylesheet">
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
     <nav>
-        <ul>
-            <li id="to-fac">FAC</li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul class="nav" id="myTopnav">
+            <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#fac">FAC</a></li>
+            <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+            <li class="nav__icon">
+                <a class="nav__hamburger" href="javascript:void(0);" onclick="toggleMenu()">&#9776;</a>
+            </li>
         </ul>
     </nav>
 
     <!-- Landing Page. (Use fullscreen class to set 100vh) -->
-    <header class="container fullscreen">
-        <h1>Globe Town Devs</h1>
+    <header class="col-12 height-full banner">
+        <div class="col-6 center">
+            <h1 class="banner_heading">Globe Town Devs</h1>
 
-        <h4>We're Tom, Marina, Nick and Lucy, a team of student developers at Founders &amp Coders,
-          a peer-led, tuition-free coding school based in London.</h4>
+            <h2>We're Tom, Marina, Nick and Lucy, a team of student developers at Founders &amp Coders,
+              a peer-led, tuition-free coding school based in London.</h2>
 
-        <button>Find Out More</button>
+            <button class="btn color-highlight">Find Out More</button>
 
-        <ul>
-            <!-- use background-image css property to set images -->
-            <li><a href="#lucy"></a></li>
-            <li><a href="#nick"></a></li>
-            <li><a href="#marina"></a></li>
-            <li><a href="#tom"></a></li>
-        </ul>
+            <ul>
+                <!-- use background-image css property to set images -->
+                <li><a href="#lucy"></a></li>
+                <li><a href="#nick"></a></li>
+                <li><a href="#marina"></a></li>
+                <li><a href="#tom"></a></li>
+            </ul>
+        </div>
     </header>
 
+    <div class="container">
+        <!-- FAC -->
+        <section id="fac" class="col-12 height-full">
+          <h2>What is FAC?</h2>
 
-    <!-- FAC -->
-    <section id="fac" class="container fullscreen">
+          <p>Founders &amp Coders (FAC) is a peer-led, tuition-free coding school based in London (since 2014)
+            and Nazareth (beginning Spring 2017). FAC transforms talented individuals from a variety of backgrounds
+            into sought-after software developers.</p>
 
-        <h2>What is FAC?</h2>
+          <p>The programme begins with a 16-week immersion in fullstack JavaScript, Node.js, and Git. Working in pairs
+            and teams, students use agile development practices and deliver projects to clients such as early-stage
+            startups and NGOs.</p>
 
-        <p>Founders &amp Coders (FAC) is a peer-led, tuition-free coding school based in London (since 2014)
-          and Nazareth (beginning Spring 2017). FAC transforms talented individuals from a variety of backgrounds
-          into sought-after software developers.<br>
+          <p>Instead of traditional top-down instruction, FAC has mentors—former students who work from FAC's co-working
+            space on freelance projects until they are ready to seek full-time employment.</p>
 
-          The programme begins with a 16-week immersion in fullstack JavaScript, Node.js, and Git. Working in pairs
-          and teams, students use agile development practices and deliver projects to clients such as early-stage
-          startups and NGOs.<br>
+                <!-- add quote if suitable to content -->
+        <!--        <blockquote></blockquote>-->
 
-          Instead of traditional top-down instruction, FAC has mentors—former students who work from FAC's co-working
-          space on freelance projects until they are ready to seek full-time employment.</p>
+                <!-- to find out more about fac... ?? -->
+                <button class="btn">Find out more... </button>
+        </section>
 
+        <!-- Team -->
+        <section id="team" class="col-12 height-full">
+                <article id="nick" class="height-half">
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="#twitter...">Twitter</a></li>
+                            <li><a href="#linkedin...">Linkedin</a></li>
+                            <li><a href="#github...">Github</a></li>
+                        </ul>
+                    </div>
 
-        <!-- add quote if suitable to content -->
-<!--        <blockquote></blockquote>-->
-
-        <!-- to find out more about fac... ?? -->
-        <button>Find out more... </button>
-
-    </section>
-
-
-    <!-- Team -->
-    <section id="team" class="container">
-
-        <article id="nick">
-            <div class="offset six columns">
-                <img>
-                <ul>
-                    <li><a href="#twitter..."></a></li>
-                    <li><a href="#linkedin..."></a></li>
-                    <li><a href="#github..."></a></li>
-                </ul>
-            </div>
-
-            <!-- write class variations to create magazine layout -->
-            <div class="minus six columns">
-                <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+                    <!-- write class variations to create magazine layout -->
+                    <div class="col-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
 
 
-                <ul class="portfolio">
-                    <!-- portfolio pieces here- images/links/icons -->
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+                        <ul class="portfolio">
+                            <!-- portfolio pieces here- images/links/icons -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
 
-        <!-- repeat three times for other team members -->
-        </article>
+                <!-- repeat three times for other team members -->
+                </article>
 
-    </section>
+                <article id="lucy" class="height-half">
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="#twitter...">Twitter</a></li>
+                            <li><a href="#linkedin...">Linkedin</a></li>
+                            <li><a href="#github...">Github</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- write class variations to create magazine layout -->
+                    <div class="col-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
 
 
+                        <ul class="portfolio">
+                            <!-- portfolio pieces here- images/links/icons -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
 
-    <!-- contact -->
-    <footer id="contact">
+                <!-- repeat three times for other team members -->
+                </article>
+        </section>
 
 
-        <form action="https://formspree.io/globetowndevs@gmail.com"
-      method="POST">
-                <input type="text" name="name" placeholder="Your Name Here">
-                <input type="email" name="_replyto" placeholder="Your Email Here">
-                <textarea name="message" placeholder="How can we help you get things done?"></textarea>
-                <input type="submit" value="Send">
-        </form>
+        <!-- contact -->
+        <footer id="contact" class="col-12 height-half center">
 
-    </footer>
+            <form action="https://formspree.io/globetowndevs@gmail.com"
+          method="POST">
+                    <input type="text" name="name" placeholder="Your Name Here">
+                    <input type="email" name="_replyto" placeholder="Your Email Here">
+                    <textarea name="message" placeholder="How can we help you get things done?"></textarea>
+                    <input type="submit" class="btn" value="Send">
+            </form>
+        </footer>
+    </div>
 
-<script src="app.js" type="text/javascript"></script>
+    <script src="app.js"></script>
+
 </body>
 
 </html>

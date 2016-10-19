@@ -1,0 +1,206 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700');
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('fonts/BebasNeue.otf');
+}
+
+/*useful classes for font-awesome icons
+   fa fa-github
+   fa fa-twitter
+   fa fa-linkedin
+   fa fa-link
+   fa fa-calculator
+   fa fa-quote-left
+   fa fa-quote-right
+*/
+
+/* Colours */
+
+/* use B&W colour scheme using grayscale*/
+/* add 1 characteristic colour --> tangerine*/
+
+.color-highlight {
+  background-color: rgb(255, 68, 21);
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+
+section, footer {
+  background-color: #ffffff;
+}
+
+/* Base */
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Bebas Neue';
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+li {
+  display: inline;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Modules */
+
+.banner {
+  background: linear-gradient(
+    rgba(20, 20, 20, 0.5),
+    rgba(20, 20, 20, 0.5)),
+    url("../images/banner_image1.jpg");
+  background-size: cover;
+  min-width: 100wh;
+  color: white;
+}
+
+.banner_heading {
+  font-size: 4em;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: .5em;
+  cursor: pointer;
+}
+
+nav {
+  /* TODO - agree on navbar heights for different screens */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.nav {
+    height: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+}
+
+/* Float the list items side by side */
+.nav__item {display: inline-block;}
+
+/* Style the links inside the list items */
+.nav__link, .nav__hamburger {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    /*min-height: 15vh;*/
+}
+
+/* Change background color of links on hover */
+.nav__link:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+.nav__icon {display: none;}
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  .nav__item {display: none;}
+  .nav__icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .nav__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive .nav__item {
+    float: none;
+    display: inline;
+  }
+  .nav.responsive .nav__link {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Grid */
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.height-full {
+  min-height: calc(100vh - 50px);
+}
+
+.height-half {
+  min-height: 50%;
+}
+
+[class*='height-'] {
+  border: 1px solid black;
+  width: 100%;
+}
+
+[class*='col-'] {
+  width: 100%;
+  padding: 10px;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0;
+  }
+
+  .banner {
+    margin-top: 50px;
+  }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%;
+  }
+
+  .col-1 {
+    width: 5%;
+  }
+  .col-3 {
+    width: 22%;
+  }
+  .col-6 {
+    width: 48%;
+  }
+  .col-12 {
+    width: 100%;
+  }
+}

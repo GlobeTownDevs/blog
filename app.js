@@ -1,7 +1,11 @@
-var toFac = document.getElementById("to-fac");
-var fac = document.getElementById("fac");
+// NAV BAR
 
-toFac.addEventListener("click", function(e) {
-  e.preventDefault();
-  fac.scrollIntoView();
-});
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function toggleMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "nav") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav";
+    }
+}
