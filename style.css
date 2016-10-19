@@ -1,12 +1,12 @@
 /*-- Nav Bar --*/
 
-nav.fixed {
+.fixed-to-top {
     position: fixed;
     width: 100%;
     top: 0;
 }
 
-.topnav {
+.nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -16,10 +16,10 @@ nav.fixed {
 }
 
 /* Float the list items side by side */
-.topnav li {display: inline-block;}
+.nav__item {display: inline-block;}
 
 /* Style the links inside the list items */
-.topnav li a {
+.nav__link {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
@@ -30,15 +30,15 @@ nav.fixed {
 }
 
 /* Change background color of links on hover */
-.topnav li a:hover {background-color: #555;}
+.nav__link:hover {background-color: #555;}
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
-.topnav li.icon {display: none;}
+.nav__icon {display: none;}
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:680px) {
-  .topnav li {display: none;}
-  .topnav li.icon {
+  .nav__item {display: none;}
+  .nav__icon {
     float: right;
     display: inline-block;
   }
@@ -46,17 +46,17 @@ nav.fixed {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive li.icon {
+  .nav.responsive {position: relative;}
+  .nav.responsive nav__icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  .topnav.responsive li {
+  .nav.responsive nav__item {
     float: none;
     display: inline;
   }
-  .topnav.responsive li a {
+  .nav.responsive nav__link {
     display: block;
     text-align: center;
   }
