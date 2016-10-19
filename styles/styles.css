@@ -63,7 +63,7 @@ li {
   background: linear-gradient(
     rgba(20, 20, 20, 0.5),
     rgba(20, 20, 20, 0.5)),
-    url("../images/banner_image1.jpg");
+    url("../images/banner_image2.jpg");
   background-size: cover;
   min-width: 100wh;
   color: white;
