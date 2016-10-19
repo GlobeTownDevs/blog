@@ -5,99 +5,125 @@
     <meta name="description" content="description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Globe Town Devs</title>
-    <link href="normalize.css" type="text/css" rel="stylesheet">
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="styles/normalize.css" type="text/css" rel="stylesheet">
+    <link href="styles/styles.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
 
     <nav>
-        <ul>
-            <li><a href="#fac">FAC</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul class="nav" id="myTopnav">
+            <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#fac">FAC</a></li>
+            <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+            <li class="nav__icon">
+                <a class="nav__hamburger" href="javascript:void(0);" onclick="toggleMenu()">&#9776;</a>
+            </li>
         </ul>
     </nav>
-    
+
     <!-- Landing Page. (Use fullscreen class to set 100vh) -->
-    <header class="container fullscreen">
-        <h1>GlobeTownDevs</h1>
+    <header class="col-12 height-full banner">
+        <div class="col-6 center">
+            <h1 class="banner_heading">GlobeTownDevs</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
 
-        <button >Find Out More</button>
+            <button class="btn color-highlight">Find Out More</button>
 
-        <ul>
-            <!-- use background-image css property to set images -->
-            <li><a href="#lucy"></a></li>
-            <li><a href="#nick"></a></li>
-            <li><a href="#marina"></a></li>
-            <li><a href="#tom"></a></li>
-        </ul>
+            <ul>
+                <!-- use background-image css property to set images -->
+                <li><a href="#lucy"></a></li>
+                <li><a href="#nick"></a></li>
+                <li><a href="#marina"></a></li>
+                <li><a href="#tom"></a></li>
+            </ul>
+        </div>
     </header>
-        
-    
-    <!-- FAC -->
-    <section id="fac" class="container fullscreen">
-        
-        <h2>Who are FAC?</h2>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
-        
-        <!-- add quote if suitable to content -->
-<!--        <blockquote></blockquote>-->
-        
-        <!-- to find out more about fac... ?? -->
-        <button>Find out more... </button>
 
-    </section>
-        
-    
-    <!-- Team -->
-    <section id="team" class="container">
-        
-        <article id="nick">
-            <div class="offset six columns">
-                <img>
-                <ul>
-                    <li><a href="#twitter..."></a></li>
-                    <li><a href="#linkedin..."></a></li>
-                    <li><a href="#github..."></a></li>
-                </ul>
-            </div>
-            
-            <!-- write class variations to create magazine layout -->
-            <div class="minus six columns">
-                <p class="six columns">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
-            
-                
-                <ul class="portfolio">
-                    <!-- portfolio pieces here- images/links/icons -->
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-        
-        <!-- repeat three times for other team members -->
-        </article>
-        
-    </section>
-    
-    
-    
-    <!-- contact -->
-    <footer id="contact">
-        
-        
-        <form action="https://formspree.io/globetowndevs@gmail.com"
-      method="POST">
-                <input type="text" name="name" placeholder="Your Name Here">
-                <input type="email" name="_replyto" placeholder="Your Email Here">
-                <textarea name="message" placeholder="How can we help you get things done?"></textarea>
-                <input type="submit" value="Send">
-        </form>
+    <div class="container">
+        <!-- FAC -->
+        <section id="fac" class="col-12 height-full">
+                <h2>Who are FAC?</h2>
 
-    </footer>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
 
-</body>    
+                <!-- add quote if suitable to content -->
+        <!--        <blockquote></blockquote>-->
+
+                <!-- to find out more about fac... ?? -->
+                <button class="btn">Find out more... </button>
+        </section>
+
+        <!-- Team -->
+        <section id="team" class="col-12 height-full">
+                <article id="nick" class="height-half">
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="#twitter...">Twitter</a></li>
+                            <li><a href="#linkedin...">Linkedin</a></li>
+                            <li><a href="#github...">Github</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- write class variations to create magazine layout -->
+                    <div class="col-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+
+
+                        <ul class="portfolio">
+                            <!-- portfolio pieces here- images/links/icons -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                <!-- repeat three times for other team members -->
+                </article>
+
+                <article id="lucy" class="height-half">
+                    <div class="col-6">
+                        <ul>
+                            <li><a href="#twitter...">Twitter</a></li>
+                            <li><a href="#linkedin...">Linkedin</a></li>
+                            <li><a href="#github...">Github</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- write class variations to create magazine layout -->
+                    <div class="col-6">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+
+
+                        <ul class="portfolio">
+                            <!-- portfolio pieces here- images/links/icons -->
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                <!-- repeat three times for other team members -->
+                </article>
+        </section>
+
+
+        <!-- contact -->
+        <footer id="contact" class="col-12 height-half center">
+
+            <form action="https://formspree.io/globetowndevs@gmail.com"
+          method="POST">
+                    <input type="text" name="name" placeholder="Your Name Here">
+                    <input type="email" name="_replyto" placeholder="Your Email Here">
+                    <textarea name="message" placeholder="How can we help you get things done?"></textarea>
+                    <input type="submit" class="btn" value="Send">
+            </form>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
 </html>
