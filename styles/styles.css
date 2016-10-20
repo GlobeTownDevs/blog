@@ -528,6 +528,11 @@ the link to open and close the topnav (li.icon) */
     padding-left: 0;
   }
 
+  .fac__button {
+    width: 50%;
+    margin: 0 0 2em;
+  }
+
   .col-3-sm {
     width: 25%;
   }
