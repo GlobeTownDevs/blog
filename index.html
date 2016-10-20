@@ -11,12 +11,12 @@
 </head>
 <body>
 
-    <nav>
+    <nav class="top-fixed">
         <ul class="nav" id="myTopnav">
-            <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
-            <li class="nav__item"><a class="nav__link" href="#fac">FAC</a></li>
-            <li class="nav__item"><a class="nav__link" href="#team">Team</a></li>
-            <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+            <li class="nav__item"><a class="nav__link" href="#about" onclick="toggleMenu()">About</a></li>
+            <li class="nav__item"><a class="nav__link" href="#fac" onclick="toggleMenu()">FAC</a></li>
+            <li class="nav__item"><a class="nav__link" href="#team" onclick="toggleMenu()">Team</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contact" onclick="toggleMenu()">Contact</a></li>
             <li class="nav__icon">
                 <a class="nav__hamburger" href="javascript:void(0);" onclick="toggleMenu()">&#9776;</a>
             </li>
@@ -24,7 +24,7 @@
     </nav>
 
     <!-- Landing Page. (Use fullscreen class to set 100vh) -->
-    <header class="col-12 height-full banner">
+    <header id="about" class="col-12 height-full banner">
         <div class="col-6 center">
             <h1 class="banner_heading">Globe Town Devs</h1>
 
@@ -33,14 +33,16 @@
 
             <button class="btn color-highlight">Find Out More</button>
 
-            <ul class="banner_avatars">
-                <!-- use background-image css property to set images -->
-                <li><a href="#lucy"><img class="banner_avatar"src="./images/marina.jpg" alt="Lucy profile picture" /></a></li>
-                <li><a href="#nick"><img class="banner_avatar"src="./images/nick.JPG" alt="Nick profile picture" /></a></li>
-                <li><a href="#marina"><img class="banner_avatar"src="./images/marina.jpg" alt="Marina profile picture" /></a></li>
-                <li><a href="#tom"><img class="banner_avatar"src="./images/nick.JPG" alt="Tom profile picture" /></a></li>
-            </ul>
         </div>
+<!-- Add comments between li items to avoid extra space from the carriage returns! -->
+        <ul class="container" id="banner_avatars">
+            <!-- use background-image css property to set images -->
+           <li><a href="#lucy"><img class="col-3-sm banner_avatar"src="./images/marina.jpg" alt="This is a profile picture of Lucy" /></a></li><!--
+        --><li><a href="#nick"><img class="col-3-sm banner_avatar"src="./images/nick.JPG" alt="This is a profile picture of Nick" /></a></li><!--
+        --><li><a href="#marina"><img class="col-3-sm banner_avatar"src="./images/marina.jpg" alt="This is a profile picture of Marina" /></a></li><!--
+        --><li><a href="#tom"><img class="col-3-sm banner_avatar"src="./images/nick.JPG" alt="This is a profile picture of Tom" /></a></li>
+        </ul>
+
     </header>
 
     <div class="container">
@@ -67,52 +69,122 @@
         </section>
 
         <!-- Team -->
-        <section id="team" class="col-12 height-full">
-                <article id="nick" class="height-half">
-                    <div class="col-6">
-                        <ul>
-                            <li><a href="#twitter...">Twitter</a></li>
-                            <li><a href="#linkedin...">Linkedin</a></li>
-                            <li><a href="#github...">Github</a></li>
+        <section class="col-12 height-full team">
+                <article id="tom" class="height-half">
+                    <div class="col-6 article__widget">
+                        <div class="article__pic">
+                          <img src="https://avatars1.githubusercontent.com/u/10003633?v=3&s=466" alt="Tom's mug shot">
+                        </div>
+                        <ul class="article__social-media">
+                            <li><i class="fa fa-github fa-3x li--social"></i></li>
+                            <li><i class="fa fa-twitter fa-3x li--social"></i></li>
+                            <li><i class="fa fa-linkedin fa-3x li--social"></i></li>
+                            <li><i class="fa fa-codewars fa-3x li--social"></i></li>
                         </ul>
                     </div>
 
                     <!-- write class variations to create magazine layout -->
-                    <div class="col-6">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+                    <div class="col-6 article__widget article__widget--right">
+                      <h3>Tom Barrett</h3>
+                        <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
 
 
-                        <ul class="portfolio">
+                        <div class="article-projects">
                             <!-- portfolio pieces here- images/links/icons -->
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <a href="#" target="_blank" class="project__links">Project 1</a><br>
+                            <a href="#" target="_blank" class="project__links">Project 2</a><br>
+                            <a href="#" target="_blank" class="project__links">Project 3</a>
+                        </div>
+                    </div>
+
+                <!-- repeat three times for other team members -->
+                </article>
+
+                <article id="marina" class="height-half">
+                    <div class="col-6 article__widget article__widget--right">
+                        <div class="article__pic">
+                          <img src="https://avatars1.githubusercontent.com/u/18351054?v=3&s=466" alt="Marina's mug shot">
+                        </div>
+                        <ul class="article__social-media">
+                            <li><i class="fa fa-github fa-3x li--social"></i></li>
+                            <li><i class="fa fa-twitter fa-3x li--social"></i></li>
+                            <li><i class="fa fa-linkedin fa-3x li--social"></i></li>
+                            <li><i class="fa fa-codewars fa-3x li--social"></i></li>
                         </ul>
+                    </div>
+
+                    <!-- write class variations to create magazine layout -->
+                    <div class="col-6 article__widget">
+                      <h3>Marina Sideri</h3>
+                        <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+
+
+                        <div class="article-projects">
+                            <!-- portfolio pieces here- images/links/icons -->
+                            <a href="#" target="_blank" class="project__links">Project 1</a><br>
+                            <a href="#" target="_blank" class="project__links">Project 2</a><br>
+                            <a href="#" target="_blank" class="project__links">Project 3</a>
+                        </div>
+                    </div>
+
+                <!-- repeat three times for other team members -->
+                </article>
+
+                <article id="nick" class="height-half">
+                    <div class="col-6 article__widget">
+                        <div class="article__pic">
+                          <img src="https://avatars2.githubusercontent.com/u/16468314?v=3&s=466" alt="Nick's mug shot">
+                        </div>
+                        <ul class="article__social-media">
+                            <li><i class="fa fa-github fa-3x li--social"></i></li>
+                            <li><i class="fa fa-twitter fa-3x li--social"></i></li>
+                            <li><i class="fa fa-linkedin fa-3x li--social"></i></li>
+                            <li><i class="fa fa-codewars fa-3x li--social"></i></li>
+                        </ul>
+                    </div>
+
+                    <!-- write class variations to create magazine layout -->
+                    <div class="col-6 article__widget article__widget--right">
+                      <h3>Nick Field</h3>
+                        <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+
+
+                        <div class="article-projects">
+                            <!-- portfolio pieces here- images/links/icons -->
+                            <a href="http://codepen.io/njsfield/pen/vXKkpN" target="_blank" class="project__links">Calculator</a><br>
+                            <a href="http://codepen.io/njsfield/pen/mAJxEp" target="_blank" class="project__links">Lunar module animation</a><br>
+                            <a href="http://codepen.io/njsfield/pen/bwBxPr" target="_blank" class="project__links">Wikipedia Viewer</a>
+                        </div>
                     </div>
 
                 <!-- repeat three times for other team members -->
                 </article>
 
                 <article id="lucy" class="height-half">
-                    <div class="col-6">
-                        <ul>
-                            <li><a href="#twitter...">Twitter</a></li>
-                            <li><a href="#linkedin...">Linkedin</a></li>
-                            <li><a href="#github...">Github</a></li>
+                    <div class="col-6 article__widget article__widget--right">
+                        <div class="article__pic">
+                          <img src="https://avatars0.githubusercontent.com/u/16781258?v=3&s=466" alt="Lucy's mug shot">
+                        </div>
+                        <ul class="article__social-media">
+                            <li><i class="fa fa-github fa-3x li--social"></i></li>
+                            <li><i class="fa fa-twitter fa-3x li--social"></i></li>
+                            <li><i class="fa fa-linkedin fa-3x li--social"></i></li>
+                            <li><i class="fa fa-codewars fa-3x li--social"></i></li>
                         </ul>
                     </div>
 
                     <!-- write class variations to create magazine layout -->
-                    <div class="col-6">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
+                    <div class="col-6 article__widget">
+                      <h3>Lucy Monie</h3>
+                        <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis nisi blandit efficitur quis vel velit. Nulla facilisi. Nullam volutpat orci sit amet semper rutrum. Vivamus ullamcorper, risus ut dignissim condimentum, nibh arcu vulputate ipsum, a iaculis nibh arcu non velit.</p>
 
 
-                        <ul class="portfolio">
+                        <div class="article-projects">
                             <!-- portfolio pieces here- images/links/icons -->
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                            <a href="#" target="_blank" class="project__links">Project 1</a><br>
+                            <a href="#" target="_blank" class="project__links">Project 2</a><br>
+                            <a href="#" target="_blank" class="project__links">Project 3</a>
+                        </div>
                     </div>
 
                 <!-- repeat three times for other team members -->
