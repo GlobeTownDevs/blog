@@ -38,7 +38,8 @@ function addHandlersToNavButtons() {
         var target = document.getElementById(navButtons[i].getAttribute("href").substr(1));
         /* offsetTop is the number of pixels from the nearest relatively positioned element, or
          * html element if there are none */
-        scroll(document.body, target.offsetTop, 250)
+        var elem = navigator.userAgent.indexOf("Firefox") > -1 ? document.documentElement : document.body;
+        scroll(elem, target.offsetTop, 250)
       });
     })(i);
   };
