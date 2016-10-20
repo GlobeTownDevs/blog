@@ -87,10 +87,20 @@ li {
   background-size: cover;
   min-width: 100wh;
   color: white;
+  /*position: relative;*/
 }
 
 .banner_heading {
   font-size: 4rem;
+}
+
+#banner_avatars {
+  padding: 0;
+}
+
+.banner_avatar {
+  border-radius: 100%;
+  width: 25%;
 }
 
 .btn {
@@ -213,7 +223,6 @@ a.project__links:visited {
   text-decoration: none;
 }
 
-
 /* Grid */
 
 .container {
@@ -241,7 +250,11 @@ a.project__links:visited {
   padding: 10px;
 }
 
+/*Small columns for mobile view*/
 
+.col-3-sm {
+  width: 25%;
+}
 
 /* Media Queries */
 
@@ -264,29 +277,25 @@ a.project__links:visited {
   }
 
   .col-1 {
-    width: 5%;
+    width: 6.67%%;
   }
   .col-3 {
-    width: 22%;
+    width: 25%;
   }
   .col-6 {
-    width: 48%;
+    width: 50%;
   }
   .col-12 {
     width: 100%;
   }
 }
 
-/* For devices larger than 680px */
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (min-width:680px) {
-
-  /*
-    Nav (desktop)
-  */
 
   .nav {
     height: 70px;
-    padding: 12px; /* centers items */
+    padding: 12px;
   }
 
   /* Hide nav icon */
@@ -310,4 +319,4 @@ a.project__links:visited {
     background-color: #555;
   }
 
-}
+/*Change avatar size on the  based on screen size*/
