@@ -89,6 +89,17 @@ li {
   font-weight: 100;
 }
 
+.banner__button {
+  width: 40%;
+  font-size: 1em;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.banner__button a {
+  text-decoration: none;
+}
+
 .banner__avatar {
   border-radius: 100%;
   width: 25%;
@@ -434,7 +445,7 @@ Footer
 except for the first one ("Home"). Show the list item that contains
 the link to open and close the topnav (li.icon) */
 @media screen and (min-width:680px) {
-  
+
   /* Grid structure */
   .container {
     width: 80%;
