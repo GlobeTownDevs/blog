@@ -450,9 +450,6 @@ Footer
     padding: 0;
   }
 
-  .banner {
-    margin-top: 50px;
-  }
 }
 
 /* When the screen is less than 680 pixels wide, hide all list items,
@@ -546,6 +543,10 @@ the link to open and close the topnav (li.icon) */
     width: 140px;
   }
 
+  /* banner spacing at top */
+  .banner {
+    padding-top: 80px;
+  }
 }
 
 
