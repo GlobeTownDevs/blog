@@ -6,16 +6,6 @@
   src: url('fonts/BebasNeue.otf');
 }
 
-/*useful classes for font-awesome icons
-   fa fa-github
-   fa fa-twitter
-   fa fa-linkedin
-   fa fa-link
-   fa fa-calculator
-   fa fa-quote-left
-   fa fa-quote-right
-*/
-
 /* Colours */
 
 /* use B&W colour scheme using grayscale*/
@@ -41,6 +31,7 @@ html {
 
 * {
   box-sizing: border-box;
+  outline-color: rgb(255, 68, 21);
 }
 
 h1 {
@@ -87,18 +78,13 @@ li {
   background-size: cover;
   min-width: 100wh;
   color: white;
-  /*position: relative;*/
 }
 
-.banner_heading {
+.banner__heading {
   font-size: 4rem;
 }
 
-#banner_avatars {
-  padding: 0;
-}
-
-.banner_avatar {
+.banner__avatar {
   border-radius: 100%;
   width: 25%;
   filter:grayscale(100%);
@@ -108,14 +94,30 @@ img:hover {
   filter:none;
 }
 
+.banner__avatar:focus,
+.banner__avatar:hover {
+  filter: brightness(1.2);
+  outline: none;
+}
+
 .btn {
   border: none;
-  color: white;
   padding: .5em;
+  outline: none;
+  border-radius: 5px;
+}
+
+.btn,
+.btn a {
+  color: white;
   cursor: pointer;
   border-radius: 5px;
 }
 
+.btn:focus,
+.btn:hover {
+  text-decoration: underline;
+}
 
 /*
   NAV MENU (mobile)
@@ -140,14 +142,20 @@ img:hover {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  transition: 0.3s;
   background-color: #333;
   font-size: 17px;
 }
 
+.nav__link:focus, .nav__link:hover,
+.nav__hamburger:focus, .nav__hamburger:hover {
+  color: rgb(255, 68, 21);
+  transition: 0.2s;
+  outline: none;
+}
+
 /* positions hamburger to right */
 .nav__icon {
-    float: right;
+  float: right;
 }
 
 
@@ -189,72 +197,61 @@ img:hover {
   text-align: center;
 }
 
+.fac__button a {
+  text-decoration: none;
+}
+
 /*Portfolio article styles from here */
-article {
+.portfolio {
   width: 100%;
-  position:relative;
-  overflow:auto;
+  position: relative;
+  overflow: auto;
   margin-bottom: 20px;
   border-bottom: 2px solid black;
 }
 
-.article__widget {
-  float:left;
+.team article:first-child {
+  border-top: 2px solid black;
+}
+
+.portfolio__widget {
+  float: left;
   text-align: left;
   font-family: 'Lato', sans-serif;
 }
 
-.article__pic {
-  float:left;
+.portfolio__widget__pic {
   border-radius: 5px;
+  max-width: 100%;
 }
 
-li.project__links {
+.portfolio__widget__heading {
+  margin-top: -1px;
+}
+
+.portfolio__widget__social li a {
+  padding-right: 5px;
+  color: rgb(255, 68, 21);;
+}
+
+.portfolio__widget__projects {
+  border-left: 1px solid #666;
+}
+
+.portfolio__widget__projects__heading {
+  margin-top:0px;
+  padding-left: 10px;
+}
+
+.portfolio__widget__projects__links li {
+  line-height:1.6em;
+  padding-left: 10px;
   display: block;
-}
-
-img {
-    max-width:100%;
-    border-radius: 5px;
-}
-
-.article__social-media {
-
-}
-
-.li--social {
-  padding-right:5px;
-  color:rgb(255, 68, 21);
 }
 
 .codewars {
   width: 20px;
 }
-
-.article__widget__heading {
-  margin-top: -1px;
-}
-
-.article__text {
-
-}
-
-.article__projects {
-  float: right;
-  border-left: 1px solid #666;
-}
-
-.article__projects__heading {
-  margin-top:0px;
-  padding-left: 10px;
-}
-
-.project__links {
-  line-height:1.6em;
-  padding-left: 10px;
-}
-
-
 
 
 /*
@@ -426,55 +423,57 @@ Footer
   }
 }
 
-
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* When the screen is less than 680 pixels wide, hide all list items,
+except for the first one ("Home"). Show the list item that contains
+the link to open and close the topnav (li.icon) */
+@media screen and (min-width:680px) {
+  
+  /* Grid structure */
   .container {
     width: 80%;
   }
 
   .col-1 {
-    width: 6.67%%;
+    width: 6.67%;
   }
+
   .col-3 {
     width: 25%;
   }
+
   .col-6 {
     width: 50%;
   }
+
   .col-12 {
     width: 100%;
   }
-}
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (min-width:680px) {
+  .offset-6 {
+    margin-left: 75%;
+    float: none;
+  }
 
+  /* Nav bar */
   .nav {
     height: 70px;
     padding: 12px;
   }
-
   /* Hide nav icon */
   .nav__icon {
     display: none;
   }
-
   /* Postion elements side by side */
   .nav__item,
   .nav.responsive .nav__item {
     display: inline-block;
   }
-
   /* Sets button width */
   .nav__link {
     width: 100px;
   }
 
-  /* Nav hover colour */
-  .nav__link:hover {
-    background-color: #555;
-  }
+
 
 
   /*
@@ -523,15 +522,21 @@ Footer
     padding: 10px;
   }
 
+  [class*='offset-'] {
+    margin-left: inherit;
+    padding-left: 0;
+  }
+
   .col-3-sm {
     width: 25%;
   }
 
-  .article__projects {
-    border-left: none;
+  .portfolio__widget__projects {
+    border-left: 0;
   }
-  img {
-      max-width:60%;
+
+  .portfolio__widget__pic {
+    max-width: 60%;
   }
 
 }
