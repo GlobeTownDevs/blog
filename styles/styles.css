@@ -387,7 +387,7 @@ input[type="submit"] {
   .nav__link:hover {
     background-color: #555;
   }
-}
+
 
   /*
   Form (Desktop)
@@ -413,6 +413,8 @@ input[type="submit"] {
     font-size: 25px;
     width: 120px;
   }
+
+}
 
 
   /* Helpers */
