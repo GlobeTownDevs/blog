@@ -92,10 +92,10 @@ li {
 .banner__avatar {
   border-radius: 100%;
   width: 25%;
-  filter:grayscale(100%);
+  filter: grayscale(100%);
 }
 
-img:hover {
+.banner__avatar:hover {
   filter:none;
 }
 
