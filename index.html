@@ -35,7 +35,7 @@
 
         </div>
 <!-- Add comments between li items to avoid extra space from the carriage returns! -->
-        <ul >
+        <ul class="container">
             <!-- use background-image css property to set images -->
            <li><a href="#lucy"><img class="col-3-sm banner__avatar" src="./images/marina.jpg" alt="This is a profile picture of Lucy" /></a></li><!--
         --><li><a href="#nick"><img class="col-3-sm banner__avatar"src="./images/nick.JPG" alt="This is a profile picture of Nick" /></a></li><!--
@@ -70,154 +70,153 @@
 
         <!-- Team -->
         <section class="col-12 team">
-                <article id="tom" class="height-half">
-                    <div class="col-3 article__widget">
-                        <div class="article__pic">
-                          <img src="https://avatars1.githubusercontent.com/u/10003633?v=3&s=466" alt="Tom's mug shot">
-                        </div>
-                    </div>
+            <article id="tom" class="height-half portfolio">
+                <div class="col-3 portfolio__widget">
+                    <img class="portfolio__widget__pic" src="https://avatars1.githubusercontent.com/u/10003633?v=3&s=466" alt="Tom's mug shot">
+                </div>
 
-                    <!-- write class variations to create magazine layout -->
-                    <div class="col-6 article__widget">
-                      <h3 class="article__widget__heading">Tom Barrett</h3>
-                        <p class="article__text">Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit. In sit amet ipsum quis
-                          nisi blandit efficitur quis vel velit. Nulla facilisi.
-                          Nullam volutpat orci sit amet semper rutrum. Vivamus
-                          ullamcorper, risus ut dignissim condimentum, nibh
-                          arcu vulputate ipsum, a iaculis nibh arcu non velit.
-                        </p>
-                          <ul class="article__social-media">
-                                <li><i class="fa fa-github fa-lg li--social"></i></li>
-                                <li><i class="fa fa-twitter fa-lg li--social"></i></li>
-                                <li><i class="fa fa-linkedin fa-lg li--social"></i></li>
-                                <li><i class="fa fa-codewars fa-lg li--social"></i></li>
-                          </ul>
-                    </div>
+                <!-- write class variations to create magazine layout -->
+                <div class="col-6 portfolio__widget">
+                    <h3 class="portfolio__widget__heading">Tom Barrett</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet ipsum quis
+                      nisi blandit efficitur quis vel velit. Nulla facilisi.
+                      Nullam volutpat orci sit amet semper rutrum. Vivamus
+                      ullamcorper, risus ut dignissim condimentum, nibh
+                      arcu vulputate ipsum, a iaculis nibh arcu non velit.
+                    </p>
+                    <ul class="portfolio__widget__social">
+                        <li><i class="fa fa-github fa-lg"></i></li>
+                        <li><i class="fa fa-twitter fa-lg"></i></li>
+                        <li><i class="fa fa-linkedin fa-lg"></i></li>
+                        <li><i class="fa fa-codewars fa-lg"></i></li>
+                    </ul>
+                </div>
 
-                    <div class="col-3 article__projects">
-                        <!-- portfolio pieces here- images/links/icons -->
-                        <h4 class="article__projects__heading">Projects</h4>
-                        <ul>
-                          <li class="project__links">Project 1</li>
-                          <li class="project__links">Project 2</li>
-                          <li class="project__links">Project 3</li>
-                          <li class="project__links">Project 4</li>
+                <div class="offset-6 col-3 portfolio__widget">
+                    <!-- portfolio pieces here- images/links/icons -->
+                    <div class="portfolio__widget__projects">
+                        <h4 class="portfolio__widget__projects__heading">Projects</h4>
+                        <ul class="portfolio__widget__projects__links">
+                          <li>Project 1</li>
+                          <li>Project 2</li>
+                          <li>Project 3</li>
+                          <li>Project 4</li>
                         </ul>
                     </div>
-                </article>
-                <!-- repeat three times for other team members -->
+                </div>
+            </article>
+            <!-- repeat three times for other team members -->
 
-                <article id="marina" class="height-half">
-                    <div class="col-3 article__widget">
-                        <div class="article__pic">
-                          <img src="#" alt="Marina's mug shot">
-                        </div>
+            <article id="marina" class="height-half portfolio">
+                <div class="col-3 portfolio__widget">
+                    <div class="portfolio__pic">
+                      <img src="#" alt="Marina's mug shot">
                     </div>
+                </div>
 
-                    <!-- write class variations to create magazine layout -->
-                    <div class="col-6 article__widget">
-                      <h3 class="article__widget__heading">Marina Sideri</h3>
-                        <p class="article__text">Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit. In sit amet ipsum quis
-                          nisi blandit efficitur quis vel velit. Nulla facilisi.
-                          Nullam volutpat orci sit amet semper rutrum. Vivamus
-                          ullamcorper, risus ut dignissim condimentum, nibh
-                          arcu vulputate ipsum, a iaculis nibh arcu non velit.
-                        </p>
-                          <ul class="article__social-media">
-                                <li><i class="fa fa-github fa-lg li--social"></i></li>
-                                <li><i class="fa fa-twitter fa-lg li--social"></i></li>
-                                <li><i class="fa fa-linkedin fa-lg li--social"></i></li>
-                                <li><i class="fa fa-codewars fa-lg li--social"></i></li>
-                          </ul>
-                    </div>
+                <!-- write class variations to create magazine layout -->
+                <div class="col-6 portfolio__widget">
+                  <h3 class="portfolio__widget__heading">Marina Sideri</h3>
+                    <p class="portfolio__text">Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. In sit amet ipsum quis
+                      nisi blandit efficitur quis vel velit. Nulla facilisi.
+                      Nullam volutpat orci sit amet semper rutrum. Vivamus
+                      ullamcorper, risus ut dignissim condimentum, nibh
+                      arcu vulputate ipsum, a iaculis nibh arcu non velit.
+                    </p>
+                      <ul class="portfolio__social-media">
+                            <li><i class="fa fa-github fa-lg li--social"></i></li>
+                            <li><i class="fa fa-twitter fa-lg li--social"></i></li>
+                            <li><i class="fa fa-linkedin fa-lg li--social"></i></li>
+                            <li><i class="fa fa-codewars fa-lg li--social"></i></li>
+                      </ul>
+                </div>
 
-                    <div class="col-3 article__projects">
-                        <!-- portfolio pieces here- images/links/icons -->
-                        <h4 class="article__projects__heading">Projects</h4>
-                        <ul>
-                          <li class="project__links">Project 1</li>
-                          <li class="project__links">Project 2</li>
-                          <li class="project__links">Project 3</li>
-                          <li class="project__links">Project 4</li>
-                        </ul>
-                    </div>
-                </article>
+                <div class="col-3 portfolio__projects">
+                    <!-- portfolio pieces here- images/links/icons -->
+                    <h4 class="portfolio__projects__heading">Projects</h4>
+                    <ul>
+                      <li class="project__links">Project 1</li>
+                      <li class="project__links">Project 2</li>
+                      <li class="project__links">Project 3</li>
+                      <li class="project__links">Project 4</li>
+                    </ul>
+                </div>
+            </article>
 
-                <article id="nick" class="height-half">
-                    <div class="col-3 article__widget">
-                        <div class="article__pic">
-                          <img src="#" alt="Nick's mug shot">
-                        </div>
+            <article id="nick" class="height-half portfolio">
+                <div class="col-3 portfolio__widget">
+                    <div class="portfolio__pic">
+                      <img src="#" alt="Nick's mug shot">
                     </div>
+                </div>
 
-                    <!-- write class variations to create magazine layout -->
-                    <div class="col-6 article__widget">
-                      <h3 class="article__widget__heading">Nick Field</h3>
-                        <p class="article__text">Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit. In sit amet ipsum quis
-                          nisi blandit efficitur quis vel velit. Nulla facilisi.
-                          Nullam volutpat orci sit amet semper rutrum. Vivamus
-                          ullamcorper, risus ut dignissim condimentum, nibh
-                          arcu vulputate ipsum, a iaculis nibh arcu non velit.
-                        </p>
-                          <ul class="article__social-media">
-                                <li><i class="fa fa-github fa-lg li--social"></i></li>
-                                <li><i class="fa fa-twitter fa-lg li--social"></i></li>
-                                <li><i class="fa fa-linkedin fa-lg li--social"></i></li>
-                                <li><i class="fa fa-codewars fa-lg li--social"></i></li>
-                          </ul>
-                    </div>
+                <!-- write class variations to create magazine layout -->
+                <div class="col-6 portfolio__widget">
+                  <h3 class="portfolio__widget__heading">Nick Field</h3>
+                    <p class="portfolio__text">Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. In sit amet ipsum quis
+                      nisi blandit efficitur quis vel velit. Nulla facilisi.
+                      Nullam volutpat orci sit amet semper rutrum. Vivamus
+                      ullamcorper, risus ut dignissim condimentum, nibh
+                      arcu vulputate ipsum, a iaculis nibh arcu non velit.
+                    </p>
+                      <ul class="portfolio__social-media">
+                            <li><i class="fa fa-github fa-lg li--social"></i></li>
+                            <li><i class="fa fa-twitter fa-lg li--social"></i></li>
+                            <li><i class="fa fa-linkedin fa-lg li--social"></i></li>
+                            <li><i class="fa fa-codewars fa-lg li--social"></i></li>
+                      </ul>
+                </div>
 
-                    <div class="col-3 article__projects">
-                        <!-- portfolio pieces here- images/links/icons -->
-                        <h4 class="article__projects__heading">Projects</h4>
-                        <ul>
-                          <li class="project__links">Project 1</li>
-                          <li class="project__links">Project 2</li>
-                          <li class="project__links">Project 3</li>
-                          <li class="project__links">Project 4</li>
-                        </ul>
-                    </div>
-                </article>
+                <div class="col-3 portfolio__projects">
+                    <!-- portfolio pieces here- images/links/icons -->
+                    <h4 class="portfolio__projects__heading">Projects</h4>
+                    <ul>
+                      <li class="project__links">Project 1</li>
+                      <li class="project__links">Project 2</li>
+                      <li class="project__links">Project 3</li>
+                      <li class="project__links">Project 4</li>
+                    </ul>
+                </div>
+            </article>
 
-                <article id="lucy" class="height-half">
-                    <div class="col-3 article__widget">
-                        <div class="article__pic">
-                          <img src="#" alt="Lucy's mug shot">
-                        </div>
+            <article id="lucy" class="height-half portfolio">
+                <div class="col-3 portfolio__widget">
+                    <div class="portfolio__pic">
+                      <img src="#" alt="Lucy's mug shot">
                     </div>
+                </div>
 
-                    <!-- write class variations to create magazine layout -->
-                    <div class="col-6 article__widget">
-                      <h3 class="article__widget__heading">Lucy Monie</h3>
-                        <p class="article__text">Lorem ipsum dolor sit amet,
-                          consectetur adipiscing elit. In sit amet ipsum quis
-                          nisi blandit efficitur quis vel velit. Nulla facilisi.
-                          Nullam volutpat orci sit amet semper rutrum. Vivamus
-                          ullamcorper, risus ut dignissim condimentum, nibh
-                          arcu vulputate ipsum, a iaculis nibh arcu non velit.
-                        </p>
-                          <ul class="article__social-media">
-                                <li><i class="fa fa-github fa-lg li--social"></i></li>
-                                <li><i class="fa fa-twitter fa-lg li--social"></i></li>
-                                <li><i class="fa fa-linkedin fa-lg li--social"></i></li>
-                                <li><i class="fa fa-codewars fa-lg li--social"></i></li>
-                          </ul>
-                    </div>
+                <!-- write class variations to create magazine layout -->
+                <div class="col-6 portfolio__widget">
+                  <h3 class="portfolio__widget__heading">Lucy Monie</h3>
+                    <p class="portfolio__text">Lorem ipsum dolor sit amet,
+                      consectetur adipiscing elit. In sit amet ipsum quis
+                      nisi blandit efficitur quis vel velit. Nulla facilisi.
+                      Nullam volutpat orci sit amet semper rutrum. Vivamus
+                      ullamcorper, risus ut dignissim condimentum, nibh
+                      arcu vulputate ipsum, a iaculis nibh arcu non velit.
+                    </p>
+                      <ul class="portfolio__social-media">
+                            <li><i class="fa fa-github fa-lg li--social"></i></li>
+                            <li><i class="fa fa-twitter fa-lg li--social"></i></li>
+                            <li><i class="fa fa-linkedin fa-lg li--social"></i></li>
+                            <li><i class="fa fa-codewars fa-lg li--social"></i></li>
+                      </ul>
+                </div>
 
-                    <div class="col-3 article__projects">
-                        <!-- portfolio pieces here- images/links/icons -->
-                        <h4 class="article__projects__heading">Projects</h4>
-                        <ul>
-                          <li class="project__links">Project 1</li>
-                          <li class="project__links">Project 2</li>
-                          <li class="project__links">Project 3</li>
-                          <li class="project__links">Project 4</li>
-                        </ul>
-                    </div>
-                </article>
+                <div class="col-3 portfolio__projects">
+                    <!-- portfolio pieces here- images/links/icons -->
+                    <h4 class="portfolio__projects__heading">Projects</h4>
+                    <ul>
+                      <li class="project__links">Project 1</li>
+                      <li class="project__links">Project 2</li>
+                      <li class="project__links">Project 3</li>
+                      <li class="project__links">Project 4</li>
+                    </ul>
+                </div>
+            </article>
 
         </section>
 

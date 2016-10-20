@@ -156,7 +156,7 @@ li {
 
 /* positions hamburger to right */
 .nav__icon {
-    float: right;
+  float: right;
 }
 
 
@@ -179,64 +179,47 @@ li {
 }
 
 /*Portfolio article styles from here */
-article {
+.portfolio {
   width: 100%;
-  position:relative;
-  overflow:auto;
+  position: relative;
+  overflow: auto;
   margin-bottom: 20px;
   border-bottom: 2px solid black;
 }
 
-.article__widget {
-  float:left;
+.portfolio__widget {
+  float: left;
   text-align: left;
   font-family: 'Lato', sans-serif;
 }
 
-.article__pic {
-  float:left;
+.portfolio__widget__pic {
   border-radius: 5px;
+  max-width: 100%;
 }
 
-li.project__links {
-  display: block;
-}
-
-img {
-    max-width:100%;
-    border-radius: 5px;
-}
-
-.article__social-media {
-
-}
-
-.li--social {
-  padding-right:5px;
-  color:rgb(255, 68, 21);
-}
-
-.article__widget__heading {
+.portfolio__widget__heading {
   margin-top: -1px;
 }
 
-.article__text {
-
+.portfolio__widget__social li {
+  padding-right: 5px;
+  color: rgb(255, 68, 21);;
 }
 
-.article__projects {
-  float: right;
+.portfolio__widget__projects {
   border-left: 1px solid #666;
 }
 
-.article__projects__heading {
+.portfolio__widget__projects__heading {
   margin-top:0px;
   padding-left: 10px;
 }
 
-.project__links {
+.portfolio__widget__projects__links li {
   line-height:1.6em;
   padding-left: 10px;
+  display: block;
 }
 
 /* Grid */
@@ -285,9 +268,12 @@ img {
   }
 }
 
-
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* When the screen is less than 680 pixels wide, hide all list items,
+except for the first one ("Home"). Show the list item that contains
+the link to open and close the topnav (li.icon) */
+@media screen and (min-width:680px) {
+  
+  /* Grid structure */
   .container {
     width: 80%;
   }
@@ -295,52 +281,61 @@ img {
   .col-1 {
     width: 6.67%;
   }
+
   .col-3 {
     width: 25%;
   }
+
   .col-6 {
     width: 50%;
   }
+
   .col-12 {
     width: 100%;
   }
-}
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (min-width:680px) {
+  .offset-6 {
+    margin-left: 75%;
+    float: none;
+  }
 
+  /* Nav bar */
   .nav {
     height: 70px;
     padding: 12px;
   }
-
   /* Hide nav icon */
   .nav__icon {
     display: none;
   }
-
   /* Postion elements side by side */
   .nav__item,
   .nav.responsive .nav__item {
     display: inline-block;
   }
-
   /* Sets button width */
   .nav__link {
     width: 100px;
   }
+
 }
 
-/* For devices smaller than 680px */
 @media (max-width: 680px) {
   [class*='col-'] {
     width: 100%;
     padding: 10px;
   }
-  .article__projects {
-    border-left: none;
+
+  [class*='offset-'] {
+    margin-left: inherit;
+    padding-left: 0;
   }
-  img {
-      max-width:60%;
+
+  .portfolio__widget__projects {
+    border-left: 0;
+  }
+
+  .portfolio__widget__pic {
+    max-width: 60%;
   }
 }
