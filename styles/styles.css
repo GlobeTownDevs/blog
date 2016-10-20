@@ -109,6 +109,7 @@ li {
   color: white;
   padding: .5em;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 
@@ -162,6 +163,26 @@ li {
 .nav.responsive .nav__item,
 .nav.responsive .nav__link {
   display: block;
+}
+
+/*fac section styles*/
+.fac__image {
+  float:left;
+  margin-top: 73px;
+  margin-left:20px;
+}
+
+#fac__text {
+  width:60%;
+  float:left;
+  margin-left:20px;
+  margin-top: 50px;
+}
+
+.fac__button {
+  width: 23%;
+  font-size: 1em;
+  text-align: center;
 }
 
 /*Portfolio article styles from here */
