@@ -72,10 +72,21 @@ li {
   background-size: cover;
   min-width: 100wh;
   color: white;
+  position: relative;
 }
 
 .banner_heading {
   font-size: 4rem;
+}
+
+.banner_avatars {
+  position: absolute;
+  bottom: 20px;
+}
+
+.banner_avatar {
+  border-radius: 100%;
+  width: 80px;
 }
 
 .btn {
@@ -190,8 +201,6 @@ nav {
   }
 }
 
-
-
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
 @media screen and (max-width:680px) {
   .nav__item {display: none;}
@@ -220,3 +229,4 @@ nav {
   }
 }
 
+/*Change avatar size on the  based on screen size*/
