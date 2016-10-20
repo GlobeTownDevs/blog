@@ -6,16 +6,6 @@
   src: url('fonts/BebasNeue.otf');
 }
 
-/*useful classes for font-awesome icons
-   fa fa-github
-   fa fa-twitter
-   fa fa-linkedin
-   fa fa-link
-   fa fa-calculator
-   fa fa-quote-left
-   fa fa-quote-right
-*/
-
 /* Colours */
 
 /* use B&W colour scheme using grayscale*/
@@ -89,7 +79,6 @@ li {
   background-size: cover;
   min-width: 100wh;
   color: white;
-  /*position: relative;*/
 }
 
 .banner__heading {
@@ -109,10 +98,15 @@ li {
 
 .btn {
   border: none;
-  color: white;
   padding: .5em;
-  cursor: pointer;
   outline: none;
+  border-radius: 5px;
+}
+
+.btn,
+.btn a {
+  color: white;
+  cursor: pointer;
 }
 
 .btn:focus,
@@ -178,6 +172,30 @@ li {
   display: block;
 }
 
+/*fac section styles*/
+.fac__image {
+  float:left;
+  margin-top: 73px;
+  margin-left:20px;
+}
+
+#fac__text {
+  width:60%;
+  float:left;
+  margin-left:20px;
+  margin-top: 50px;
+}
+
+.fac__button {
+  width: 23%;
+  font-size: 1em;
+  text-align: center;
+}
+
+.fac__button a {
+  text-decoration: none;
+}
+
 /*Portfolio article styles from here */
 .portfolio {
   width: 100%;
@@ -202,7 +220,7 @@ li {
   margin-top: -1px;
 }
 
-.portfolio__widget__social li {
+.portfolio__widget__social li a {
   padding-right: 5px;
   color: rgb(255, 68, 21);;
 }
@@ -329,6 +347,10 @@ the link to open and close the topnav (li.icon) */
   [class*='offset-'] {
     margin-left: inherit;
     padding-left: 0;
+  }
+
+  .col-3-sm {
+    width: 25%;
   }
 
   .portfolio__widget__projects {
