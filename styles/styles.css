@@ -236,7 +236,7 @@ li {
 
 .portfolio__widget__social li a {
   padding-right: 5px;
-  color: rgb(255, 68, 21);;
+  color: rgb(255, 68, 21);
 }
 
 .portfolio__widget__projects {
@@ -252,6 +252,15 @@ li {
   line-height:1.6em;
   padding-left: 10px;
   display: block;
+}
+
+.portfolio__widget__projects__links li a {
+  color: rgb(255, 68, 21);
+}
+
+.portfolio__widget__projects__links li a:hover {
+  color: #333;
+  text-decoration: none;
 }
 
 .codewars {
@@ -434,7 +443,7 @@ Footer
 except for the first one ("Home"). Show the list item that contains
 the link to open and close the topnav (li.icon) */
 @media screen and (min-width:680px) {
-  
+
   /* Grid structure */
   .container {
     width: 80%;
