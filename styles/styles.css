@@ -202,6 +202,10 @@ img {
   color:rgb(255, 68, 21);
 }
 
+.codewars {
+  width: 20px;
+}
+
 .article__widget__heading {
   margin-top: -1px;
 }
@@ -328,6 +332,11 @@ img {
     width: 100%;
     padding: 10px;
   }
+
+  .col-3-sm {
+    width: 25%;
+  }
+
   .article__projects {
     border-left: none;
   }
