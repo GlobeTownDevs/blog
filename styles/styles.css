@@ -45,7 +45,6 @@ html {
 
 h1 {
   font-family: 'Bebas Neue';
-    font-size: 15px;
 }
 
 ul {
@@ -213,6 +212,73 @@ a.project__links:visited {
   text-decoration: none;
 }
 
+/* Contact */
+
+#contact {
+  background:  rgb(255, 68, 21);
+}
+
+form {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  background: ;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.form-row {
+  width: 100%;
+  margin: 20px auto;
+  text-align: none;
+}
+
+fieldset {
+  border: 4px solid white;
+  border-radius: 5px;
+}
+
+legend {
+  padding: 10px;
+  font-family: 'Bebas Neue';
+  color: white;
+  font-size: 25px;
+}
+
+label {
+  display: inline-block;
+  font-family: 'Bebas Neue';
+  color: white;
+  width: 19%;
+}
+
+input[type="text"], input[type="email"] {
+  width: 79%;
+  display: inline-block;
+  margin: 0;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  resize: none;
+  height: 100px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 0;
+}
+
+input[type="submit"] {
+  margin-bottom: 10px;
+  width: 100px;
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  border-radius: 5px;
+}
+
 
 /* Grid */
 
@@ -309,5 +375,39 @@ a.project__links:visited {
   .nav__link:hover {
     background-color: #555;
   }
+
+
+  /*
+  Form
+  */
+
+  .form-row {
+    width: 75%;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  label,form input, form textarea {
+    padding: 10px;
+  }
+
+  legend {
+    font-size: 40px;
+  }
+
+  input[type="submit"] {
+    font-size: 25px;
+    width: 120px;
+  }
+
+
+  /* Helpers */
+
+  .nav-space {
+    padding-top: 100px;
+  }
+
 
 }

@@ -67,7 +67,7 @@
         </section>
 
         <!-- Team -->
-        <section class="col-12 height-full team">
+        <section class="col-12 height-full" id="team">
                 <article id="tom" class="height-half">
                     <div class="col-6 article__widget">
                         <div class="article__pic">
@@ -189,19 +189,36 @@
                 </article>
         </section>
 
-
-        <!-- contact -->
-        <footer id="contact" class="col-12 height-half center">
-
-            <form action="https://formspree.io/globetowndevs@gmail.com"
-          method="POST">
-                    <input type="text" name="name" placeholder="Your Name Here">
-                    <input type="email" name="_replyto" placeholder="Your Email Here">
-                    <textarea name="message" placeholder="How can we help you get things done?"></textarea>
-                    <input type="submit" class="btn" value="Send">
-            </form>
-        </footer>
     </div>
+
+<!-- contact -->
+    <section id="contact" class="col-12 height-full nav-space">
+
+        <form action="https://formspree.io/globetowndevs@gmail.com"
+      method="POST">
+          <fieldset class="form-container">
+            <legend>Contact Us</legend>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Johnathan Doeington">
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" placeholder="johnunderscore_one1@atdotcom.com">
+              </div>
+
+              <div class="form-row">
+                <textarea name="message" id="message" placeholder="You guys rock"></textarea>
+              </div>
+              <input type="submit" class="btn" value="Send">
+          </fieldset>
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer></footer>
 
     <script src="app.js"></script>
 
