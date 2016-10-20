@@ -227,24 +227,24 @@
 <!-- contact -->
     <section id="contact" class="col-12 height-full nav-space">
 
-        <form action="https://formspree.io/globetowndevs@gmail.com"
+        <form class="form" action="https://formspree.io/globetowndevs@gmail.com"
       method="POST">
-          <fieldset class="form-container">
-            <legend>Contact Us</legend>
-              <div class="form-row">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Johnathan Doeington">
+          <fieldset class="form__border">
+            <legend class="form__title">Contact Us</legend>
+              <div class="form__row">
+                <label class="form__label" for="name">Name</label>
+                <input class="form__creds" type="text" name="name" id="name" placeholder="Johnathan Doeington">
               </div>
 
-              <div class="form-row">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="_replyto" placeholder="johnunderscore_one1@atdotcom.com">
+              <div class="form__row">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__creds" type="email" id="email" name="_replyto" placeholder="johnunderscore_one1@atdotcom.com">
               </div>
 
-              <div class="form-row">
-                <textarea name="message" id="message" placeholder="You guys rock"></textarea>
+              <div class="form__row">
+                <textarea class="form__message" name="message" id="message" placeholder="You guys rock"></textarea>
               </div>
-              <input type="submit" class="btn" value="Send">
+              <input type="submit" class="form__submit form__submit--white form__submit--hover" value="Send">
           </fieldset>
         </form>
 
