@@ -57,8 +57,9 @@ li {
   text-align: center;
 }
 
+/* Nav Space for mobile */
 .nav-space {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .top-fixed {
@@ -68,6 +69,30 @@ li {
   left: 0;
   z-index: 999;
 }
+
+/* Clearfix */
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+
+
 
 /* Modules */
 
@@ -184,15 +209,14 @@ li {
 /*fac section styles*/
 .fac__image {
   float:left;
-  margin-top: 73px;
   margin-left:20px;
 }
 
-#fac__text {
+.fac__text {
   width:60%;
   float:left;
   margin-left:20px;
-  margin-top: 50px;
+  padding-top: 0;
 }
 
 .fac__button {
@@ -214,6 +238,7 @@ li {
   margin-bottom: 20px;
   border-bottom: 2px solid black;
 }
+
 
 .team article:first-child {
   border-top: 2px solid black;
@@ -393,7 +418,7 @@ Footer
 }
 
 .height-full {
-  min-height: 100vh; /* Use padding to make room for nav, see mobile preview in dev-tools */
+  height: 100vh; /* Use padding to make room for nav, see mobile preview in dev-tools */
 }
 
 .height-half {
@@ -434,7 +459,7 @@ Footer
 except for the first one ("Home"). Show the list item that contains
 the link to open and close the topnav (li.icon) */
 @media screen and (min-width:680px) {
-  
+
   /* Grid structure */
   .container {
     width: 80%;
@@ -481,6 +506,17 @@ the link to open and close the topnav (li.icon) */
   }
 
 
+  /* Fac Image/Text padding for desktop */
+
+  .fac__image {
+     margin-top: 73px;
+  }
+
+  .fac__text {
+    margin-top: 50px;
+  }
+
+
 
 
   /*
@@ -508,14 +544,6 @@ the link to open and close the topnav (li.icon) */
   .form__submit {
     font-size: 25px;
     width: 140px;
-  }
-
-
-
-  /* Helpers */
-
-  .nav-space {
-    padding-top: 100px;
   }
 
 }
