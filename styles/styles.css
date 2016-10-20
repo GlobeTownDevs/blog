@@ -41,6 +41,7 @@ html {
 
 * {
   box-sizing: border-box;
+  outline-color: rgb(255, 68, 21);
 }
 
 h1 {
@@ -91,17 +92,19 @@ li {
   /*position: relative;*/
 }
 
-.banner_heading {
+.banner__heading {
   font-size: 4rem;
 }
 
-#banner_avatars {
-  padding: 0;
-}
-
-.banner_avatar {
+.banner__avatar {
   border-radius: 100%;
   width: 25%;
+}
+
+.banner__avatar:focus,
+.banner__avatar:hover {
+  filter: brightness(1.2);
+  outline: none;
 }
 
 .btn {
@@ -109,8 +112,13 @@ li {
   color: white;
   padding: .5em;
   cursor: pointer;
+  outline: none;
 }
 
+.btn:focus,
+.btn:hover {
+  text-decoration: underline;
+}
 
 /*
   NAV MENU (mobile)
@@ -135,9 +143,15 @@ li {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  transition: 0.3s;
   background-color: #333;
   font-size: 17px;
+}
+
+.nav__link:focus, .nav__link:hover,
+.nav__hamburger:focus, .nav__hamburger:hover {
+  color: rgb(255, 68, 21);
+  transition: 0.2s;
+  outline: none;
 }
 
 /* positions hamburger to right */
@@ -279,7 +293,7 @@ img {
   }
 
   .col-1 {
-    width: 6.67%%;
+    width: 6.67%;
   }
   .col-3 {
     width: 25%;
@@ -314,11 +328,6 @@ img {
   /* Sets button width */
   .nav__link {
     width: 100px;
-  }
-
-  /* Nav hover colour */
-  .nav__link:hover {
-    background-color: #555;
   }
 }
 
