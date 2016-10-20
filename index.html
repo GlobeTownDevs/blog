@@ -35,28 +35,10 @@
 
     <!-- Add comments between li items to avoid extra space from the carriage returns! -->
     <ul class="container">
-      <li>
-        <a href="#lucy">
-          <img class="col-3-sm banner__avatar" src="https://avatars0.githubusercontent.com/u/16781258?v=3&s=466"     alt="This is a profile picture of Lucy" />
-        </a>
-      </li><!--
-   --><li>
-        <a href="#nick">
-          <img class="col-3-sm banner__avatar" src="./images/nick.JPG" alt="This is a profile picture of Nick" />
-        </a>
-      </li><!--
-   --><li>
-        <a href="#marina">
-          <img class="col-3-sm banner__avatar" src="./images/marina.jpg"
-           alt="This is a profile picture of Marina" />
-        </a>
-      </li><!--
-   --><li>
-        <a href="#tom">
-          <img class="col-3-sm banner__avatar" src="https://avatars1.githubusercontent.com/u/10003633?v=3&s=466" 
-            alt="This is a profile picture of Tom" />
-        </a>
-      </li>
+      <li><a href="#lucy"><img class="col-3-sm banner__avatar" src="https://avatars0.githubusercontent.com/u/16781258?v=3&s=466" alt="This is a profile picture of Lucy" /></a></li><!--
+   --><li><a href="#nick"><img class="col-3-sm banner__avatar" src="./images/nick.JPG" alt="This is a profile picture of Nick" /></a></li><!--
+   --><li><a href="#marina"><img class="col-3-sm banner__avatar" src="./images/marina.jpg" alt="This is a profile picture of Marina" /></a></li><!--
+   --><li><a href="#tom"><img class="col-3-sm banner__avatar" src="https://avatars1.githubusercontent.com/u/10003633?v=3&s=466" alt="This is a profile picture of Tom" /></a></li>
     </ul>
   </header>
 
@@ -87,7 +69,7 @@
     </section>
 
     <!-- Team -->
-    <section class="col-12 team">
+    <section class="col-12 team" id="team">
       <article id="tom" class="height-half portfolio">
         <div class="col-3 portfolio__widget">
           <img class="portfolio__widget__pic" src="https://avatars1.githubusercontent.com/u/10003633?v=3&s=466" alt="Tom's mug shot">
@@ -246,22 +228,39 @@
       </article>
 
     </section>
-
-
-    <!-- contact -->
-    <footer id="contact" class="col-12 height-half center">
-
-      <form action="https://formspree.io/globetowndevs@gmail.com"
-        method="POST">
-          <input type="text" name="name" placeholder="Your Name Here">
-          <input type="email" name="_replyto" placeholder="Your Email Here">
-          <textarea name="message" placeholder="How can we help you get things done?"></textarea>
-          <input type="submit" class="btn" value="Send">
-      </form>
-    </footer>
   </div>
 
-  <script src="app.js"></script>
+  <!-- contact -->
+  <section id="contact" class="col-12 height-full nav-space">
 
-</body>
+    <form class="form" action="https://formspree.io/globetowndevs@gmail.com"
+    method="POST">
+      <fieldset class="form__border">
+        <legend class="form__title">Contact Us</legend>
+          <div class="form__row">
+            <label class="form__label" for="name">Name</label>
+            <input class="form__creds" type="text" name="name" id="name" placeholder="Johnathan Doeington">
+          </div>
+
+          <div class="form__row">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__creds" type="email" id="email" name="_replyto" placeholder="johnunderscore_one1@atdotcom.com">
+          </div>
+
+          <div class="form__row">
+            <textarea class="form__message" name="message" id="message" placeholder="You guys rock"></textarea>
+          </div>
+        <input type="submit" class="form__submit form__submit--white form__submit--hover" value="Send">
+      </fieldset>
+    </form>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer footer--grey-bg">
+    <div class="footer__text--small footer__text--centered footer__text--lightgray">&copy; 2016 Globe Town Devs. All Rights Reserved</div>
+  </footer>
+
+    <script src="app.js"></script>
+</body
 </html>

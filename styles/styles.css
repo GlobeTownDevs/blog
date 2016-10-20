@@ -36,7 +36,6 @@ html {
 
 h1 {
   font-family: 'Bebas Neue';
-    font-size: 15px;
 }
 
 ul {
@@ -88,6 +87,11 @@ li {
 .banner__avatar {
   border-radius: 100%;
   width: 25%;
+  filter:grayscale(100%);
+}
+
+img:hover {
+  filter:none;
 }
 
 .banner__avatar:focus,
@@ -107,6 +111,7 @@ li {
 .btn a {
   color: white;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .btn:focus,
@@ -205,6 +210,10 @@ li {
   border-bottom: 2px solid black;
 }
 
+.team article:first-child {
+  border-top: 2px solid black;
+}
+
 .portfolio__widget {
   float: left;
   text-align: left;
@@ -239,6 +248,134 @@ li {
   padding-left: 10px;
   display: block;
 }
+
+.codewars {
+  width: 20px;
+}
+
+
+/*
+Contact Form
+*/
+
+/* section */
+#contact {
+  background: rgb(255, 68, 21);
+}
+
+
+/* overall form width */
+.form {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.form__title {
+  padding: 10px;
+  font-family: 'Bebas Neue';
+  color: white;
+  font-size: 25px;
+}
+
+.form__border {
+  border: 4px solid white;
+  border-radius: 10px;
+}
+
+.form__row {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.form__label {
+  display: inline-block;
+  position: relative;
+  font-family: 'Bebas Neue';
+  color: white;
+  width: 19%;
+}
+
+.form__creds {
+  width: 79%;
+  display: inline-block;
+  border: 0;
+  margin: 0;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+
+.form__message {
+  width: 100%;
+  resize: none;
+  height: 130px;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+}
+
+.form__submit {
+  margin-bottom: 10px;
+  width: 100px;
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+ /* button color */
+.form__submit--white {
+  background: white;
+  color: rgb(255, 68, 21);
+  border: 2px solid rgb(255, 68, 21);
+}
+
+/* button hover */
+.form__submit--hover:hover {
+  border: 2px solid white;
+  background: rgb(255, 68, 21);
+  color: white;
+}
+
+
+
+/*
+Footer
+*/
+
+.footer {
+  width: 100%;
+  padding: 20px;
+}
+
+.footer__text--small {
+  font-size: 10px;
+}
+
+.footer__text--centered {
+  text-align: center;
+}
+
+.footer__text--lightgray {
+  color: lightgray;
+}
+
+/*
+.footer--orange-bg {
+  background: rgb(255, 68, 21);
+}
+*/
+
+.footer--grey-bg {
+  background: #333;
+}
+
+
 
 /* Grid */
 
@@ -336,8 +473,49 @@ the link to open and close the topnav (li.icon) */
     width: 100px;
   }
 
+
+
+
+  /*
+  Form (Desktop)
+  */
+
+  .form__row {
+    width: 75%;
+  }
+
+  .form__title {
+    font-size: 40px;
+  }
+
+  .form__label {
+    font-size: 30px;
+    top: 3px;
+  }
+
+  .form__creds,
+  .form__message {
+    padding: 10px;
+  }
+
+  .form__submit {
+    font-size: 25px;
+    width: 140px;
+  }
+
+
+
+  /* Helpers */
+
+  .nav-space {
+    padding-top: 100px;
+  }
+
 }
 
+
+
+/* For devices smaller than 680px */
 @media (max-width: 680px) {
   [class*='col-'] {
     width: 100%;
@@ -360,4 +538,5 @@ the link to open and close the topnav (li.icon) */
   .portfolio__widget__pic {
     max-width: 60%;
   }
+
 }
