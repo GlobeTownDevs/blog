@@ -316,6 +316,40 @@ Contact Form
 }
 
 
+
+/*
+Footer
+*/
+
+.footer {
+  width: 100%;
+  padding: 20px;
+}
+
+.footer__text--small {
+  font-size: 10px;
+}
+
+.footer__text--centered {
+  text-align: center;
+}
+
+.footer__text--lightgray {
+  color: lightgray;
+}
+
+/*
+.footer--orange-bg {
+  background: rgb(255, 68, 21);
+}
+*/
+
+.footer--grey-bg {
+  background: #333;
+}
+
+
+
 /* Grid */
 
 .container {
