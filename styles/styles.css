@@ -17,6 +17,7 @@
 
 body {
   background-color: rgb(245, 245, 245);
+  font-family: 'Lato';
 }
 
 section, footer {
@@ -82,6 +83,10 @@ li {
 
 .banner__heading {
   font-size: 4rem;
+}
+
+.banner__subheading {
+  font-weight: 100;
 }
 
 .banner__avatar {
