@@ -58,9 +58,24 @@ li {
   display: inline;
 }
 
+
+/* Helpers */
+
 .center {
   margin: 0 auto;
   text-align: center;
+}
+
+.nav-space {
+  padding-top: 50px;
+}
+
+.top-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 /* Modules */
@@ -73,10 +88,20 @@ li {
   background-size: cover;
   min-width: 100wh;
   color: white;
+  /*position: relative;*/
 }
 
 .banner_heading {
   font-size: 4rem;
+}
+
+#banner_avatars {
+  padding: 0;
+}
+
+.banner_avatar {
+  border-radius: 100%;
+  width: 25%;
 }
 
 .btn {
@@ -87,49 +112,57 @@ li {
 }
 
 
-/* Nav */
-
-nav {
-  /* TODO - agree on navbar heights for different screens */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
+/*
+  NAV MENU (mobile)
+*/
 
 .nav {
-    height: 50px;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    text-align: center;
+  height: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  text-align: center;
 }
 
-/* Float the list items side by side */
-.nav__item {
-    display: inline-block;
-    background-color: #333;
+.nav__item {display: none;}
+
+/* style mobile links & hamburger */
+.nav__link,
+.nav__hamburger {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  background-color: #333;
+  font-size: 17px;
 }
 
-/* Style the links inside the list items */
-.nav__link, .nav__hamburger {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 17px;
-    /*min-height: 15vh;*/
+/* positions hamburger to right */
+.nav__icon {
+    float: right;
 }
 
-/* Change background color of links on hover */
-.nav__link:hover {background-color: #555;}
 
-/* Hide the list item that contains the link that should open and close the topnav on small screens */
-.nav__icon {display: none;}
+/* when hamburger is clicked,
+  'responsive' class is added to nav container,
+   allowing the following styles...
+*/
+
+/* positions hamburger in top right */
+.nav.responsive .nav__hamburger {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* allows nav links to stack */
+.nav.responsive .nav__item,
+.nav.responsive .nav__link {
+  display: block;
+}
 
 /*Portfolio article styles from here */
 article {
@@ -192,7 +225,6 @@ img {
   padding-left: 10px;
 }
 
-
 /* Grid */
 
 .container {
@@ -202,7 +234,7 @@ img {
 }
 
 .height-full {
-  min-height: calc(100vh - 50px);
+  min-height: 100vh; /* Use padding to make room for nav, see mobile preview in dev-tools */
 }
 
 .height-half {
@@ -218,6 +250,14 @@ img {
   width: 100%;
   padding: 10px;
 }
+
+/*Small columns for mobile view*/
+
+.col-3-sm {
+  width: 25%;
+}
+
+/* Media Queries */
 
 /* For devices larger than 400px */
 @media (min-width: 400px) {
@@ -239,52 +279,46 @@ img {
   }
 
   .col-1 {
-    width: 5%;
+    width: 6.67%%;
   }
   .col-3 {
-    width: 22%;
+    width: 25%;
   }
   .col-6 {
-    width: 48%;
+    width: 50%;
   }
   .col-12 {
     width: 100%;
   }
 }
 
-
-
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
-@media screen and (max-width:680px) {
-  .nav__item {display: none;}
+@media screen and (min-width:680px) {
+
+  .nav {
+    height: 70px;
+    padding: 12px;
+  }
+
+  /* Hide nav icon */
   .nav__icon {
-    float: right;
+    display: none;
+  }
+
+  /* Postion elements side by side */
+  .nav__item,
+  .nav.responsive .nav__item {
     display: inline-block;
   }
-  .article__projects {
-    border-left: none;
-  }
-  img {
-      max-width:60%;
-  }
-}
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
-@media screen and (max-width:680px) {
-  .nav.responsive {position: relative;}
-  .nav.responsive .nav__icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+  /* Sets button width */
+  .nav__link {
+    width: 100px;
   }
-  .nav.responsive .nav__item {
-    float: none;
-    display: block;
 
-  }
-  .nav.responsive .nav__link {
-    display: block;
-    text-align: center;
+  /* Nav hover colour */
+  .nav__link:hover {
+    background-color: #555;
   }
 }
 
@@ -293,5 +327,11 @@ img {
   [class*='col-'] {
     width: 100%;
     padding: 10px;
+  }
+  .article__projects {
+    border-left: none;
+  }
+  img {
+      max-width:60%;
   }
 }
