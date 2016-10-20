@@ -96,7 +96,7 @@ li {
 }
 
 .banner__avatar:hover {
-  filter:none;
+  filter: none;
 }
 
 .banner__avatar:focus,
@@ -196,9 +196,10 @@ li {
 }
 
 .fac__button {
-  width: 23%;
+  width: 40%;
   font-size: 1em;
   text-align: center;
+  margin: 0 0 2em;
 }
 
 .fac__button a {
@@ -535,7 +536,6 @@ the link to open and close the topnav (li.icon) */
 
   .fac__button {
     width: 50%;
-    margin: 0 0 2em;
   }
 
   .col-3-sm {
