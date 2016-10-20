@@ -158,7 +158,6 @@ img:hover {
   float: right;
 }
 
-
 /* when hamburger is clicked,
   'responsive' class is added to nav container,
    allowing the following styles...
@@ -250,7 +249,9 @@ img:hover {
 }
 
 .codewars {
-  width: 20px;
+  width: 24px;
+  position: relative;
+  top: 6px;
 }
 
 
