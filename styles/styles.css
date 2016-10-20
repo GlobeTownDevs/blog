@@ -101,6 +101,11 @@ li {
 .banner_avatar {
   border-radius: 100%;
   width: 25%;
+  filter:grayscale(100%);
+}
+
+img:hover {
+  filter:none;
 }
 
 .btn {
@@ -108,6 +113,7 @@ li {
   color: white;
   padding: .5em;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 
@@ -163,6 +169,26 @@ li {
   display: block;
 }
 
+/*fac section styles*/
+.fac__image {
+  float:left;
+  margin-top: 73px;
+  margin-left:20px;
+}
+
+#fac__text {
+  width:60%;
+  float:left;
+  margin-left:20px;
+  margin-top: 50px;
+}
+
+.fac__button {
+  width: 23%;
+  font-size: 1em;
+  text-align: center;
+}
+
 /*Portfolio article styles from here */
 article {
   width: 100%;
@@ -199,6 +225,10 @@ img {
 .li--social {
   padding-right:5px;
   color:rgb(255, 68, 21);
+}
+
+.codewars {
+  width: 20px;
 }
 
 .article__widget__heading {
@@ -492,6 +522,11 @@ Footer
     width: 100%;
     padding: 10px;
   }
+
+  .col-3-sm {
+    width: 25%;
+  }
+
   .article__projects {
     border-left: none;
   }
