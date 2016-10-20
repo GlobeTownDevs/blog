@@ -102,6 +102,11 @@ li {
 .banner_avatar {
   border-radius: 100%;
   width: 25%;
+  filter:grayscale(100%);
+}
+
+img:hover {
+  filter:none;
 }
 
 .btn {
