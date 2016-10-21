@@ -70,6 +70,10 @@ li {
   z-index: 999;
 }
 
+.no-decorate {
+  text-decoration: none;
+}
+
 /* Clearfix */
 
 .clearfix:after {
@@ -234,10 +238,6 @@ li {
   margin: 0 0 2em;
 }
 
-.fac__link {
-  text-decoration: none;
-}
-
 /*Portfolio article styles from here */
 .portfolio {
   width: 100%;
@@ -386,7 +386,8 @@ Contact Form
 }
 
 /* button hover */
-.form__submit--hover:hover {
+.form__submit--hover:hover,
+.form__submit--hover:focus {
   border: 2px solid white;
   background: rgb(255, 68, 21);
   color: white;
