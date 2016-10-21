@@ -247,6 +247,8 @@ li {
   position: relative;
   overflow: auto;
   margin-bottom: 20px;
+  padding-top: 60px; /* needed for profile spacing... */
+  padding-bottom: 60px; /* needed for profile spacing... */
   border-bottom: 2px solid black;
 }
 
