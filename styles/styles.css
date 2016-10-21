@@ -402,7 +402,7 @@ Footer
 */
 
 .footer {
-  width: 100%;
+  width: 100vw; /* to ensure fullest width on all desktop sizes */
   padding: 20px;
 }
 
