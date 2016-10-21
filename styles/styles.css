@@ -144,18 +144,15 @@ li {
 .btn {
   border: none;
   padding: .5em;
-  outline: none;
   border-radius: 5px;
 }
 
 .btn,
 .btn a {
   color: white;
-  cursor: pointer;
   border-radius: 5px;
 }
 
-.btn:focus,
 .btn:hover {
   text-decoration: underline;
 }
@@ -237,7 +234,7 @@ li {
   margin: 0 0 2em;
 }
 
-.fac__button a {
+.fac__link {
   text-decoration: none;
 }
 
