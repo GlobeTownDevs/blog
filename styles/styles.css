@@ -70,6 +70,10 @@ li {
   z-index: 999;
 }
 
+.no-decorate {
+  text-decoration: none;
+}
+
 /* Clearfix */
 
 .clearfix:after {
@@ -144,18 +148,15 @@ li {
 .btn {
   border: none;
   padding: .5em;
-  outline: none;
   border-radius: 5px;
 }
 
 .btn,
 .btn a {
   color: white;
-  cursor: pointer;
   border-radius: 5px;
 }
 
-.btn:focus,
 .btn:hover {
   text-decoration: underline;
 }
@@ -235,10 +236,6 @@ li {
   font-size: 1em;
   text-align: center;
   margin: 0 0 2em;
-}
-
-.fac__button a {
-  text-decoration: none;
 }
 
 /*Portfolio article styles from here */
@@ -391,7 +388,8 @@ Contact Form
 }
 
 /* button hover */
-.form__submit--hover:hover {
+.form__submit--hover:hover,
+.form__submit--hover:focus {
   border: 2px solid white;
   background: rgb(255, 68, 21);
   color: white;
