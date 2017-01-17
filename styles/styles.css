@@ -106,7 +106,6 @@ li {
     rgba(20, 20, 20, 0.5)),
     url("../images/banner_image2.jpg");
   background-size: cover;
-  min-width: 100wh;
   color: white;
 }
 
@@ -522,8 +521,11 @@ the link to open and close the topnav (li.icon) */
   .nav__link {
     width: 100px;
   }
-
-
+  /* Remove banner heading margin to make room for avatar pics */
+  .banner__heading {
+    margin: 0 0;
+  }
+  
   /* Fac Image/Text padding for desktop */
 
   .fac__image {
